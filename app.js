@@ -57,7 +57,7 @@ passport.use(
           }
         })
         .catch(() => {
-          return done(null, false, { message: "EmailID is invalid" });
+          return done(null, false, { message: "EmailID is invalid or Your Email is not Registered" });
         });
     }
   )

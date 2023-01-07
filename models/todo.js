@@ -103,7 +103,10 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         validate: {
           notNull: true,
-          len: 5,
+          len: {
+            args: 5,
+            msg: "Todo title should be atleast 5 characters long",
+          },
         },
       },
       dueDate: {
@@ -111,6 +114,10 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         validate: {
           notNull: true,
+          len: {
+            args: 1,
+            msg: "mention date",
+          },
         },
       },
       completed: {
